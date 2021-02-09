@@ -1,84 +1,62 @@
-<html> 
-<head>
-<title> agenda</title>
+<html>
+    <head>
+        <title>Agenda</title>
+    </head>
 
+    <body>
+        <h1>Agenda de Contatos</h1>
 
-</head>
+        <form method="POST">
+            <fieldset>
+                <legend>Dados do Contato</legend>
 
-<body>
-     
-      <h1>agenda de contatos </h1>
+                <label>Nome</label>
+                <input type="text" name="nome">
+                <br>
 
-    <form  method="POST"> 
-    <fieldset>
-    <legend>  dados do contato</legend>
-      <label> nome </label>
-     <input type="text" name = "nome">
-    <br>
+                <label>Telefone</label>
+                <input type="text" name="telefone">
+                <br>
 
-     <label>telefone</label>
-    <input type="text " name = "telefone">
-     <br>
+                <label>Email</label>
+                <input type="text" name="email">
+                <br>
 
-    <label >email</label>
-     <input type="text" name= "email">
-    <br>
+                <label>Cidade</label>
+                <input type="text" name="cidade">
+                <br>
 
-<   label> cidade</label>
-    <input type="text" name="cidade">
-    <br>
+                <button type="submit">Cadastrar</button>
 
-    <button type= "submit">cadastro</button>
-    </fieldset>
-  
-    </form>
+            </fieldset>
+        </form>
 
-    <table>
-    <thead>
-    <tr>
-    <th>nome </th>
-    <th>telefone</th>
-    <th>email</th> 
-    <th>cidade</th>
- 
- 
- 
-    </tr>
- 
-    
- 
- </thead>
- 
- <tbody>
- <tr>
- <td>Bruce Waine</td>
- <td>11-2222-3333</td>
- <td>bruce@waine.com</td>
- <td>Gothan City</td>
- 
- 
- 
- </tr>
+<?php
+    $nome = $_POST["nome"];
+    $telefone = $_POST["telefone"];
+    $email = $_POST["email"];
+    $cidade = $_POST["cidade"];
+?>
+        <table>
+            <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Email</th>
+                <th>Cidade</th>
+            </tr>
+            </thead>
 
+            <tbody>
+                <tr>
+                    <td><?php echo $nome ?></td>
+                    <td><?php echo $telefone ?></td>
+                    <td><?php echo $email ?></td>
+                    <td><?php echo $cidade ?></td>
+                </tr>
+            </tbody>
 
+        </table>
 
- 
- 
- 
- 
- 
- </tbody>
- 
- 
- 
- 
- 
- </table>
-</body>
-
-
-
-
-
-
+    </body>
 </html>
